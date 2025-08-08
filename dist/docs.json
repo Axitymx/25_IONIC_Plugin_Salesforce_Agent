@@ -1,0 +1,90 @@
+{
+  "api": {
+    "name": "SalesforceChatPlugin",
+    "slug": "salesforcechatplugin",
+    "docs": "",
+    "tags": [],
+    "methods": [
+      {
+        "name": "openMessaging",
+        "signature": "(params: SalesforceMessagingParams) => Promise<void>",
+        "parameters": [
+          {
+            "name": "params",
+            "docs": "- An`SalesforceMessagingParams` object containing salesforce configuration",
+            "type": "SalesforceMessagingParams"
+          }
+        ],
+        "returns": "Promise<void>",
+        "tags": [
+          {
+            "name": "method",
+            "text": "openMessaging\nOpen a Salesforce messaging session"
+          },
+          {
+            "name": "param",
+            "text": "params - An`SalesforceMessagingParams` object containing salesforce configuration"
+          }
+        ],
+        "docs": "",
+        "complexTypes": [
+          "SalesforceMessagingParams"
+        ],
+        "slug": "openmessaging"
+      }
+    ],
+    "properties": []
+  },
+  "interfaces": [
+    {
+      "name": "SalesforceMessagingParams",
+      "slug": "salesforcemessagingparams",
+      "docs": "Represents the parameters required to configure Salesforce Embedded Messaging.",
+      "tags": [
+        {
+          "text": "SalesforceMessagingParams",
+          "name": "interface"
+        },
+        {
+          "text": "{string} Url - The base URL for the Salesforce Embedded Messaging service.",
+          "name": "property"
+        },
+        {
+          "text": "{string} OrganizationId - The Salesforce organization identifier.",
+          "name": "property"
+        },
+        {
+          "text": "{string} DeveloperName - The developer-defined name for the Salesforce deployment.",
+          "name": "property"
+        }
+      ],
+      "methods": [],
+      "properties": [
+        {
+          "name": "Url",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "OrganizationId",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "DeveloperName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        }
+      ]
+    }
+  ],
+  "enums": [],
+  "typeAliases": [],
+  "pluginConfigs": []
+}
