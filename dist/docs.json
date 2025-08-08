@@ -56,6 +56,10 @@
         {
           "text": "{string} DeveloperName - The developer-defined name for the Salesforce deployment.",
           "name": "property"
+        },
+        {
+          "text": "{string} ConversationId - The conversation identifier type UUID.",
+          "name": "property"
         }
       ],
       "methods": [],
@@ -76,6 +80,13 @@
         },
         {
           "name": "DeveloperName",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string"
+        },
+        {
+          "name": "ConversationId",
           "tags": [],
           "docs": "",
           "complexTypes": [],

@@ -9,4 +9,5 @@ struct ChatParams {
     let serviceUrl: String?
     let organizationId: String?
     let developerName: String?
+    let conversationId: String?
 }

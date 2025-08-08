@@ -25,7 +25,8 @@ class SalesforceChatPlugin : Plugin() {
         val params = ChatParams(
             serviceUrl = call.getString("Url"),
             organizationId = call.getString("OrganizationId"),
-            developerName = call.getString("DeveloperName")
+            developerName = call.getString("DeveloperName"),
+            conversationId = call.getString("ConversationId")
         )
 
         val validationError = implementation.validateChatParams(params)

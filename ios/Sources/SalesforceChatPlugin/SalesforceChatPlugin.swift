@@ -30,7 +30,8 @@ public class SalesforceChatPlugin: CAPPlugin, CAPBridgedPlugin {
         let params = ChatParams(
             serviceUrl: call.getString("Url"),
             organizationId: call.getString("OrganizationId"),
-            developerName: call.getString("DeveloperName")
+            developerName: call.getString("DeveloperName"),
+            conversationId: call.getString("ConversationId")
         )
         
         if let error = implementation.validate(params: params) {

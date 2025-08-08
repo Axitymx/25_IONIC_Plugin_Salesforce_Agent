@@ -8,6 +8,7 @@
 enum ChatError: LocalizedError {
     case missingPresenter
     case invalidURL
+    case invalidUUID
     case unsupportedVersion
     case missingParameters
     
@@ -17,6 +18,8 @@ enum ChatError: LocalizedError {
             return "No se pudo obtener el view controller principal"
         case .invalidURL:
             return "Invalid URL"
+        case .invalidUUID:
+            return "Invalid invalidUUID"
         case .unsupportedVersion:
             return "Versión incompatible: requiere iOS 14.1 o superior"
         case .missingParameters:

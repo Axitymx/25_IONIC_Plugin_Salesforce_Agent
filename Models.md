@@ -35,5 +35,6 @@ Represents the parameters required to configure Salesforce Embedded Messaging.
 | **`Url`**            | <code>string</code> |
 | **`OrganizationId`** | <code>string</code> |
 | **`DeveloperName`**  | <code>string</code> |
+| **`ConversationId`** | <code>string</code> |
 
 </docgen-api>

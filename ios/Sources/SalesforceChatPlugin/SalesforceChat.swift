@@ -17,6 +17,10 @@ import SMIClientUI
             guard let url = URL(string: params.serviceUrl!) else {
                 throw ChatError.invalidURL
             }
+
+            guard let uuidObj = UUID(uuidString: params.conversationId!) else {
+                throw ChatError.invalidUUID
+            }
             
             guard #available(iOS 14.1, *) else {
                 throw ChatError.unsupportedVersion
@@ -28,7 +32,7 @@ import SMIClientUI
                     serviceAPI: url,
                     organizationId: params.organizationId!,
                     developerName: params.developerName!,
-                    conversationId: UUID()
+                    conversationId: uuidObj
                 )
                 
                 let chatVC = ModalInterfaceViewController(config)
@@ -61,6 +65,7 @@ import SMIClientUI
     func validate(params: ChatParams) -> String? {
         if params.serviceUrl?.isEmpty ?? true ||
             params.organizationId?.isEmpty ?? true ||
+            params.conversationId?.isEmpty ?? true ||
             params.developerName?.isEmpty ?? true {
             return ChatError.missingParameters.localizedDescription
         }

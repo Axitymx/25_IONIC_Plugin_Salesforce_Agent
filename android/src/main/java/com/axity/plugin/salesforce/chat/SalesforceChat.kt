@@ -17,7 +17,10 @@ class SalesforceChat {
     fun openChat(activity: Activity, params: ChatParams) {
         val serviceUrl = URL(params.serviceUrl!!)
         val coreConfig = CoreConfiguration(serviceUrl, params.organizationId!!, params.developerName!!)
-        val uiConfig = UIConfiguration(coreConfig, UUID.randomUUID())
+
+        val uuidObj = UUID.fromString(params.conversationId)
+        Log.i("uuidObj", uuidObj.toString())
+        val uiConfig = UIConfiguration(coreConfig, uuidObj)
         val activity: Activity = activity
 
         UIClient.Factory.create(uiConfig)
@@ -27,9 +30,17 @@ class SalesforceChat {
     fun validateChatParams(params: ChatParams): String? {
         if (params.serviceUrl.isNullOrEmpty() ||
             params.organizationId.isNullOrEmpty() ||
-            params.developerName.isNullOrEmpty()
+            params.developerName.isNullOrEmpty() ||
+            params.conversationId.isNullOrEmpty()
         ) {
             return "Missing parameters: serviceUrl, organizationId, or developerName"
+        }
+
+        return try {
+            UUID.fromString(params.conversationId)
+            null
+        } catch (e: IllegalArgumentException) {
+            "UUID invalid"
         }
 
         return try {
