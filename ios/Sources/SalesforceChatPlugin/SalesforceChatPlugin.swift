@@ -25,7 +25,7 @@ public class SalesforceChatPlugin: CAPPlugin, CAPBridgedPlugin {
             "value": implementation.echo(value)
         ])
     }
-    
+
     @objc func openMessaging(_ call: CAPPluginCall) {
         let params = ChatParams(
             serviceUrl: call.getString("Url"),
@@ -33,12 +33,12 @@ public class SalesforceChatPlugin: CAPPlugin, CAPBridgedPlugin {
             developerName: call.getString("DeveloperName"),
             conversationId: call.getString("ConversationId")
         )
-        
+
         if let error = implementation.validate(params: params) {
             call.reject(error)
             return
         }
-        
+
         do {
             try implementation.presentChat(from: self.bridge?.viewController, with: params)
             call.resolve(["success": true])
