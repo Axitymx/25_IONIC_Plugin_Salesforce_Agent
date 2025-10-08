@@ -11,7 +11,7 @@ enum ChatError: LocalizedError {
     case invalidUUID
     case unsupportedVersion
     case missingParameters
-    
+
     var errorDescription: String? {
         switch self {
         case .missingPresenter:

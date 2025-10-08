@@ -1,7 +1,8 @@
 {
-  "name": "@capacitor/salesforce-chat",
-  "version": "0.0.1",
+  "name": "@axity/salesforce-chat",
+  "version": "6.0.0",
   "description": "Plugin for implementing Salesforce chat",
+  "author": "Axity MX",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
   "types": "dist/esm/index.d.ts",
@@ -13,17 +14,17 @@
     "ios/Sources",
     "ios/Tests",
     "Package.swift",
-    "CapacitorSalesforceChat.podspec"
+    "AxitySalesforceChat.podspec"
   ],
-  "author": "Axity MX",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Axitymx/25_IONIC_Plugin_Salesforce_Agent"
+    "url": "git+https://github.com/Axitymx/25_IONIC_Plugin_Salesforce_Agent.git"
   },
   "bugs": {
-    "url": "https://github.com/Axitymx/25_IONIC_Plugin_Salesforce_Agent"
+    "url": "https://github.com/Axitymx/25_IONIC_Plugin_Salesforce_Agent/issues"
   },
+  "homepage": "https://github.com/Axitymx/25_IONIC_Plugin_Salesforce_Agent#README.md",
   "keywords": [
     "capacitor",
     "plugin",
@@ -53,11 +54,19 @@
     "@ionic/eslint-config": "^0.4.0",
     "@ionic/prettier-config": "^4.0.0",
     "@ionic/swiftlint-config": "^2.0.0",
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/commit-analyzer": "^13.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^11.0.6",
+    "@semantic-release/npm": "^12.0.2",
+    "@semantic-release/release-notes-generator": "^14.1.0",
+    "conventional-changelog-conventionalcommits": "^9.1.0",
     "eslint": "^8.57.0",
     "prettier": "^3.3.3",
     "prettier-plugin-java": "^2.6.4",
     "rimraf": "^6.0.1",
     "rollup": "^4.24.0",
+    "semantic-release": "^24.2.9",
     "swiftlint": "^2.0.0",
     "typescript": "~4.1.5"
   },
